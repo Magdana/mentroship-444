@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
 }
 h2,
 h1 {
@@ -35,13 +36,14 @@ header {
 .main-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 45px;
   margin-top: 60px;
 }
 .box {
   border-radius: 7px;
   padding: 30px;
   text-align: right;
+  box-shadow: 5px 5px 5px 0px rgba(197, 189, 193, 0.29);
 }
 .box-content {
   text-align: left;
@@ -52,6 +54,7 @@ header {
 }
 .box-2 {
   border-top: 4px solid hsl(0, 78%, 62%);
+  margin-bottom: 30px;
 }
 .box-3 {
   border-top: 4px solid hsl(34, 97%, 64%);
@@ -73,8 +76,31 @@ h3 {
 .box-4 {
   align-self: center;
 }
-@media only screen and(max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
   .main-content {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .box-container {
+    gap: 35px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  header h2,
+  h1 {
+    font-size: 22px;
+  }
+  .box {
+    padding: 15px;
+  }
+  .box-content {
+    padding-bottom: 30px;
+  }
+  .main-content {
+    gap: 20px;
+  }
+  .box-container {
+    gap: 20px;
   }
 }
